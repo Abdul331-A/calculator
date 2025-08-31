@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>calculator</title>
+    <link rel="stylesheet" href="calcstyle.css">
+    
+</head>
+<body>
+    <h1 class="text-center text-5xl font-extrabold">CALCULATOR</h1>
+
+    <div class="w-[570px] h-[590px] bg-gray-900 mx-auto p-10 rounded-[10px] pb-10">
+        <form action="">
+            <p class="text-white text-[1.5rem] pl-10 font-bold">CASIO</p>
+
+            <input type="text" id="screen" class="border border-gray-400 p-2 w-full bg-white H-[80px] text-[4rem] text-right rounded-lg">
+            <br>
+
+            <input type="button" value="7" class="border border-gray-400 p-2 w-[92px] h-[70px] bg-black text-white text-2xl m-[10px] rounded-full hover:bg-gray-600 focus:outline-2 focus:outline-offset-2 focus:outline-gray-500 active:bg-gray-700" onclick="btnClick(value) " >
+            <input type="button" value="8" class="border border-gray-400 p-2 w-[92px] h-[70px] bg-black text-white text-2xl  m-[10px] rounded-full hover:bg-gray-600 focus:outline-2 focus:outline-offset-2 focus:outline-gray-500 active:bg-gray-700" onclick="btnClick(value)" >
+            <input type="button" value="9" class="border border-gray-400 p-2 w-[92px] h-[70px] bg-black text-white text-2xl m-[10px] rounded-full  hover:bg-gray-600 focus:outline-2 focus:outline-offset-2 focus:outline-gray-500 active:bg-gray-700" onclick="btnClick(value)" >
+            <input type="button" value="/" class="border border-gray-400 p-2 w-[92px] h-[70px] bg-gray-700 text-white text-2xl m-[10px] rounded-full  hover:bg-gray-600 focus:outline-2 focus:outline-offset-2 focus:outline-gray-500 active:bg-gray-700"onclick="btnClick(value)" >
+            <br>
+            <input type="button" value="4" class="border border-gray-400 p-2 w-[92px] h-[70px] bg-black text-white text-2xl  m-[10px] rounded-full  hover:bg-gray-600 focus:outline-2 focus:outline-offset-2 focus:outline-gray-500 active:bg-gray-700" onclick="btnClick(value)">
+            <input type="button" value="5" class="border border-gray-400 p-2 w-[92px] h-[70px] bg-black text-white text-2xl  m-[10px] rounded-full  hover:bg-gray-600 focus:outline-2 focus:outline-offset-2 focus:outline-gray-500 active:bg-gray-700" onclick="btnClick(value)" >
+            <input type="button" value="6" class="border border-gray-400 p-2 w-[92px] h-[70px] bg-black text-white text-2xl m-[10px] rounded-full  hover:bg-gray-600 focus:outline-2 focus:outline-offset-2 focus:outline-gray-500 active:bg-gray-700" onclick="btnClick(value)">
+            <input type="button" value="*" class="border border-gray-400 p-2 w-[92px] h-[70px] bg-gray-700 text-white text-2xl m-[10px] rounded-full  hover:bg-gray-600 focus:outline-2 focus:outline-offset-2 focus:outline-gray-500 active:bg-gray-700" onclick="btnClick(value)">
+           <br>
+           <input type="button" value="1" class="border border-gray-400 p-2 w-[92px] h-[70px] bg-black text-white text-2xl m-[10px] rounded-full  hover:bg-gray-600 focus:outline-2 focus:outline-offset-2 focus:outline-gray-500 active:bg-gray-700" onclick="btnClick(value)">
+           <input type="button" value="2" class="border border-gray-400 p-2 w-[92px] h-[70px] bg-black text-white text-2xl  m-[10px] rounded-full  hover:bg-gray-600 focus:outline-2 focus:outline-offset-2 focus:outline-gray-500 active:bg-gray-700" onclick="btnClick(value)">
+           <input type="button" value="3" class="border border-gray-400 p-2 w-[92px] h-[70px] bg-black text-white text-2xl m-[10px] rounded-full  hover:bg-gray-600 focus:outline-2 focus:outline-offset-2 focus:outline-gray-500 active:bg-gray-700" onclick="btnClick(value)">
+           <input type="button" value="+" class="border border-gray-400 p-2 w-[92px] h-[70px] bg-gray-700 text-white text-2xl m-[10px] rounded-full  hover:bg-gray-600 focus:outline-2 focus:outline-offset-2 focus:outline-gray-500 active:bg-gray-700" onclick="btnClick(value)" >
+           <br>
+           <input type="button" value="c" class="border border-gray-400 p-2 w-[92px] h-[70px] text-white bg-red-600 text-2xl m-[10px] rounded-full  hover:bg-gray-600 focus:outline-2 focus:outline-offset-2 focus:outline-gray-500 active:bg-gray-700" onclick="clearScreen()">
+           <input type="button" value="0" class="border border-gray-400 p-2 w-[92px] h-[70px] bg-black text-white text-2xl  m-[10px] rounded-full  hover:bg-gray-600 focus:outline-2 focus:outline-offset-2 focus:outline-gray-500 active:bg-gray-700" onclick="btnClick(value)" >
+           <input type="button" value="=" class="border border-gray-400 p-2 w-[92px] h-[70px] bg-black text-white text-2xl m-[10px] rounded-full  hover:bg-gray-600 focus:outline-2 focus:outline-offset-2 focus:outline-gray-500 active:bg-gray-700" onclick="findResult()" >
+           <input type="button" value="-" class="border border-gray-400 p-2 w-[92px] h-[70px] bg-gray-700 text-white text-2xl m-[10px] rounded-full  hover:bg-gray-600 focus:outline-2 focus:outline-offset-2 focus:outline-gray-500 active:bg-gray-700" onclick="btnClick(value)">
+          
+        </form>
+
+
+
+    </div>
+
+
+
+    <script src="calc.js"></script>
+</body>
+</html>
